@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "email": "Brady@test.com",
+      "name": "Brady Williams",
+      "id": 1
+    },
+    {
+      "email": "colby@test.com",
+      "name": "Colby Ryan",
+      "id": 2
+    }
+  ],
+  "vehicles": [],
+  "tasks": [],
+  "events": [],
+  "photos": []
+}
