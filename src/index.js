@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import DriftingApart from './DriftingApart';
+import { DriftingApart } from './DriftingApart';
+import { BrowserRouter as Router } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <DriftingApart />
+    <Router>
+      <DriftingApart />
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
