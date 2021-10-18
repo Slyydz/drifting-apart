@@ -40,16 +40,16 @@
 
 .button--login {
     background: #A93535;
-    color: black;
+    color: #122625;
   }
   
   .button--login:hover {
-    background: black;
+    background: #122625;
     color: #A93535;
   }
   
   .button--login:active {
-    background: black;
+    background: #122625;
     top: 2px;
   }
   
@@ -77,7 +77,8 @@
 
 .form--css{
     display: flex;
-    margin-top: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     margin-right: auto;
     margin-left: auto;
     justify-content: center;
@@ -91,4 +92,27 @@
 .logo-login{
     width: 200px;
     height: 200px;
+}
+
+.logo--register {
+    width: 200px;
+    height: 200px;
+}
+
+.form--register{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: #DBD7D7;
+    border-radius: 10px;
+    width: 1100px;
+    height: 600px;
+}
+
+.form-control {
+    
 }

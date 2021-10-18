@@ -1,12 +1,12 @@
 import React from "react";
-import "./Dashboard.css"
+import "./UpcomingEvents.css"
 
-export const Dashboard = () => {
+export const UpcomingEvents = () => {
     return (
             <>
             <div className="main-content">
         
-              <div className="dashboard__subtitle">Welcome To Drifting Apart!</div>
+              <div className="UpcomingEvents__subtitle">Upcoming Events</div>
         
             </div>
             </>
