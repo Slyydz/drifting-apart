@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { useHistory } from "react-router-dom";
-
+import logo from "../../images/Drifting-Apart-logo-fixed.png"
 import "./Login.css"
 
 export const Register = () => {
@@ -58,28 +58,31 @@ export const Register = () => {
 
     return (
         <main style={{ textAlign: "center" }}>
-
+            <nav className="nav_flex">
+                <img className="logo" src={logo} alt="Drifting Apart Logo" />
+            </nav>
             <dialog className="dialog dialog--password" open={conflictDialog}>
                 <div>Account with that email address already exists</div>
                 <button className="button--close" onClick={e => setConflictDialog(false)}>Close</button>
             </dialog>
 
-            <form className="form--login" onSubmit={handleRegister}>
+            <form className="form--register" onSubmit={handleRegister}>
+                <img className="logo--register" src={logo} alt="Drifting Apart Logo" />
                 <h1 className="h3 mb-3 font-weight-normal">Please Register An Account</h1>
-                <fieldset>
-                    <label htmlFor="firstName"> First Name </label>
+                <fieldset className="email">
+                    <label htmlFor="firstName"> First Name: </label>
                     <input type="text" name="firstName" id="firstName" className="form-control" placeholder="First name" required autoFocus value={registerUser.firstName} onChange={handleInputChange} />
                 </fieldset>
-                <fieldset>
-                    <label htmlFor="lastName"> Last Name </label>
+                <fieldset className="email">
+                    <label htmlFor="lastName"> Last Name: </label>
                     <input type="text" name="lastName" id="lastName" className="form-control" placeholder="Last name" required value={registerUser.lastName} onChange={handleInputChange} />
                 </fieldset>
-                <fieldset>
-                    <label htmlFor="inputEmail"> Email address </label>
+                <fieldset className="email">
+                    <label htmlFor="inputEmail"> Email address: </label>
                     <input type="email" name="email" id="email" className="form-control" placeholder="Email address" required value={registerUser.email} onChange={handleInputChange} />
                 </fieldset>
-                <fieldset>
-                    <button type="submit"> Sign in </button>
+                <fieldset className="wrap">
+                    <button className="button--login" type="submit"> Register </button>
                 </fieldset>
             </form>
         </main>

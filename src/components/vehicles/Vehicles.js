@@ -1,12 +1,12 @@
 import React from "react";
-import "./Dashboard.css"
+import "./Vehicles.css"
 
-export const Dashboard = () => {
+export const Vehicles = () => {
     return (
             <>
             <div className="main-content">
         
-              <div className="dashboard__subtitle">Welcome To Drifting Apart!</div>
+              <div className="Vehicles__subtitle">Vehicles</div>
         
             </div>
             </>

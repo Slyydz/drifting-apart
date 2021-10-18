@@ -1,12 +1,1 @@
-.dashboard {
-    display: flex;
-    margin-top: 50px;
-    margin-right: auto;
-    margin-left: auto;
-    justify-content: center;
-    align-items: center;
-    background-color: #DBD7D7;
-    border-radius: 10px;
-    width: 1100px;
-    height: 600px;
-}
+@import "./BackBlock.css"

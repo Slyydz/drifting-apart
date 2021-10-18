@@ -1,12 +1,12 @@
 import React from "react";
-import "./Dashboard.css"
+import "./PhotoGallery.css"
 
-export const Dashboard = () => {
+export const PhotoGallery = () => {
     return (
             <>
             <div className="main-content">
         
-              <div className="dashboard__subtitle">Welcome To Drifting Apart!</div>
+              <div className="PhotoGallery__subtitle">Photo Gallery</div>
         
             </div>
             </>
