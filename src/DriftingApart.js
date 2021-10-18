@@ -3,6 +3,7 @@ import { Route, Redirect } from "react-router-dom"
 import { ApplicationViews } from "./components/ApplicationViews"
 import { Login } from "./components/auth/Login"
 import { Register } from "./components/auth/Register"
+import { Footer } from "./components/footer/Footer"
 import { NavBar } from "./components/nav/NavBar"
 
 export const DriftingApart = () => (
@@ -14,6 +15,7 @@ export const DriftingApart = () => (
             <>
               <NavBar />
               <ApplicationViews />
+              <Footer />
             </>
           )
         } else {

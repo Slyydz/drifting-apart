@@ -1,21 +1,16 @@
-
-
-.nav__flex {
+.footer {
     background-color: #DBD7D7;
     display: flex;
     flex-direction: row;
     width: 100%;
     margin: 0;
     padding-right: 0;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    box-shadow: 1px 1px 8px black;
+    box-shadow: 10px 10px 10px 10px;
 }
-.logo {
-    width: 100px;
 
-}
-.nav {
+.nav-footer {
     list-style-type: none;
     width: 700px;
     padding-left: 0;
@@ -24,16 +19,14 @@
     justify-content: space-evenly;
 }
 
-.nav a{
+.nav-footer a{
     font-weight: bolder;
     color: Black;
     text-decoration: none;
 }
 
-.nav__button {
-    font-weight: bolder;
-    text-decoration: none;
-    cursor: pointer;
-    border: none;
-    background: #DBD7D7;
-  }  
+.contain-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
