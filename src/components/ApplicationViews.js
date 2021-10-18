@@ -16,9 +16,6 @@ export const ApplicationViews = () => {
       <Route path="/messages">
         {/* Render the component for the messages */}
       </Route>
-      <Route path="/tasks">
-        {/* Render the component for the user's tasks */}
-      </Route>
       <Route path="/events">
         {/* Render the component for the user's events */}
       </Route>
