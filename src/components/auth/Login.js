@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react"
 import { Link, useHistory } from "react-router-dom";
+import logo from "../../images/Drifting-Apart-logo-fixed.png"
 import "./Login.css"
 
 
@@ -40,33 +41,36 @@ export const Login = () => {
 
     return (
         <main className="container--login">
+            <nav className="nav_flex">
+                <img className="logo" src={logo} alt="Drifting Apart Logo" />
+            </nav>
             <dialog className="dialog dialog--auth" open={existDialog}>
                 <div>User does not exist</div>
                 <button className="button--close" onClick={e => setExistDialog(false)}>Close</button>
             </dialog>
-            <section>
+            <section className="form--css">
                 <form className="form--login" onSubmit={handleLogin}>
-                    <h1>Drifting Apart</h1>
-                    <h2>Please sign in</h2>
-                    <fieldset>
-                        <label htmlFor="inputEmail"> Email address </label>
+                    <img className="logo-login" src={logo} alt="Drifting Apart Logo" />
+                    {/* <h2>Please sign in below</h2> */}
+                    <fieldset className="email">
+                        <label htmlFor="inputEmail"> </label>
                         <input type="email"
                             id="email"
                             className="form-control"
-                            placeholder="Email address"
+                            placeholder="Input your email address"
                             required autoFocus
                             value={loginUser.email}
                             onChange={handleInputChange} />
                     </fieldset>
-                    <fieldset>
-                        <button type="submit">
+                    <fieldset className="wrap">
+                        <button className="button--login" type="submit">
                             Sign in
                         </button>
                     </fieldset>
+                    <section className="link--register">
+                        <Link to="/register">Register for an account</Link>
+                    </section>
                 </form>
-            </section>
-            <section className="link--register">
-                <Link to="/register">Register for an account</Link>
             </section>
         </main>
     )

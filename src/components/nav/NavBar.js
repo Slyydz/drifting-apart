@@ -11,7 +11,7 @@ const history = useHistory();
 
   return (
     <nav className="nav__flex">
-      <img className="logo" src={logo} alt="Drifting Apart Logo" />
+      <Link to="/"> <img className="logo" src={logo} alt="Drifting Apart Logo" /></Link>
       <ul className="nav">
         <li className="nav__item">
           <Link className="nav__link" to="/vehicles">My Vehicles</Link>
@@ -23,14 +23,11 @@ const history = useHistory();
           <Link className="nav__link" to="/past">Past Events</Link>
         </li>
         <li className="nav__item">
-          <Link className="nav__link" to="/tasks">Tasks</Link>
-        </li>
-        <li className="nav__item">
           <Link className="nav__link" to="/gallery">Photo Gallery</Link>
         </li>
       </ul>
       <button className="nav__button" onClick={() => {
-            sessionStorage.removeItem("nutshell_user");
+            sessionStorage.removeItem("drifting_user");
             history.push("/login")
         }}>Logout</button>
     </nav>
