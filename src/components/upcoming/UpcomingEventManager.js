@@ -2,7 +2,7 @@ const remoteURL = "http://localhost:8088"
 
 export const getEvents = () => {
     //be sure your animals have good data and related to a location and customer
-    return fetch(`${remoteURL}/events`)
+    return fetch(`${remoteURL}/events/?_expand=vehicle`)
         .then(res => res.json())
 }
 
