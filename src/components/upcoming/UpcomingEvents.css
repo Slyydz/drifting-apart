@@ -1,1 +1,129 @@
-@import "../BackBlock.css"
+@import "../BackBlock.css";
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.events-title{
+    text-decoration: underline;
+    font-family: 'Lato';
+    font-size: inherit;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+.buttons-events{
+    display: flex;
+    justify-content: space-around;
+}
+
+.event-card {
+    display: flex;
+    background: #DEDEDE;
+    flex-direction: column;
+    border: solid #000;
+    border-width: 2px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px darkgrey;
+    margin-bottom: 10px;
+    width: 400px;
+    height: auto;
+    font-family: 'Lato';
+    font-size: inherit;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.event-card:hover{
+    background: #122625;
+    color: #A93535;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.events-delete{
+    cursor: pointer;
+    border: none;
+    font-family: 'Lato';
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    transition: transform .2s ease-in-out; 
+}
+.events-delete:hover{
+    transform: scale(1.1); 
+}
+
+.events-edit{
+    cursor: pointer;
+    border: none;
+    font-family: 'Lato';
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    transition: transform .2s ease-in-out; 
+}
+.events-edit:hover{
+    transform: scale(1.1); 
+}
+
+.events-add{
+    border: none;
+    border-radius: 4px;
+    box-shadow: 3px 3px 3px 3px darkgrey;
+    font-family: 'Lato';
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    cursor: pointer;
+    padding: 25px 80px;
+    display: inline-block;
+    margin: 15px 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.events-add {
+    background: #A93535;
+    color: #122625;
+  }
+  
+  .events-add:hover {
+    background: #122625;
+    color: #A93535;
+  }
+  
+  .events-add:active {
+    background: #122625;
+    top: 2px;
+  }
+  
+  .events-add:before {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    line-height: 3;
+    font-size: 140%;
+    width: 60px;
+  }
+
+
+.scroll-box{
+    max-height: 600px;
+    min-width: 500px;
+    overflow-y: auto;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}

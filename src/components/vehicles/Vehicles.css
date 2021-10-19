@@ -17,6 +17,7 @@
 .vehicle-card {
     display: flex;
     flex-direction: column;
+    background: #DEDEDE;
     border: solid #000;
     border-width: 2px;
     border-radius: 5px;
@@ -109,3 +110,14 @@
     font-size: 140%;
     width: 60px;
   }
+
+
+.scroll-box{
+    max-height: 600px;
+    max-width:400px;
+    overflow-y: auto;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
