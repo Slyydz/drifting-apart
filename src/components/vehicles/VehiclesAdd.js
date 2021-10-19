@@ -55,9 +55,13 @@ export const VehicleAdd = () => {
 					<input type="text" id="model" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Vehicle model" value={vehicle.model} />
 				</div>
 			</fieldset>
-			<button className="btn btn-primary"
+			<button className="btn-add-save"
 				onClick={handleClickSaveVehicle}>
 				Save Vehicle
+          </button>
+          <button className="btn-add-edit"
+				onClick={() => history.push("/vehicles")}>
+				Cancel
           </button>
 		</form>
 	)

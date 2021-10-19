@@ -18,14 +18,14 @@
   ],
   "vehicles": [
     {
-      "year": 1990,
+      "id": 1,
+      "year": "1990",
       "make": "Nissan",
       "model": "240sx",
-      "userId": 1,
-      "id": 1
+      "userId": 1
     },
     {
-      "year": 1996,
+      "year": "1996",
       "make": "Mazda",
       "model": "Miata",
       "userId": 1,
