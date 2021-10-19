@@ -47,6 +47,15 @@
     }
   ],
   "tasks": [],
-  "events": [],
+  "events": [
+    {
+      "id": 1,
+      "vehicleId": 2,
+      "eventName": "LowStyle Event",
+      "eventDesc": "Midpond LowStyle event put on by Jackson",
+      "eventDate": 1634669116922,
+      "eventTrack": "Midpond Raceway"
+    }
+  ],
   "photos": []
 }
