@@ -50,6 +50,19 @@
     transform: scale(1.1); 
 }
 
+.vehicles-edit{
+    cursor: pointer;
+    border: none;
+    font-family: 'Lato';
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    transition: transform .2s ease-in-out; 
+}
+.vehicles-edit:hover{
+    transform: scale(1.1); 
+}
+
 .vehicles-add{
     border: none;
     border-radius: 4px;

@@ -79,8 +79,13 @@ export const VehicleEdit = () => {
                         <button
                             type="button" disabled={isLoading}
                             onClick={updateExistingAnimal}
-                            className="btn btn-primary"
+                            className="btn-edit-save"
                         >Submit</button>
+                        <button
+                            type="button" disabled={isLoading}
+                            onClick={() => history.push("/vehicles")}
+                            className="btn-edit-cancel"
+                        >Cancel</button>
                 </fieldset>
             </form>
         </>
