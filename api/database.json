@@ -16,7 +16,36 @@
       "id": 3
     }
   ],
-  "vehicles": [],
+  "vehicles": [
+    {
+      "year": 1990,
+      "make": "Nissan",
+      "model": "240sx",
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "year": 1996,
+      "make": "Mazda",
+      "model": "Miata",
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "year": "2003",
+      "make": "Nissan",
+      "model": "350z",
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "year": "2010",
+      "make": "Chevrolet",
+      "model": "Terry Cruze",
+      "userId": 3,
+      "id": 4
+    }
+  ],
   "tasks": [],
   "events": [],
   "photos": []
