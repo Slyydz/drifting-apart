@@ -1,2 +1,98 @@
 @import "../BackBlock.css";
 
+.main-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.vehicles-title{
+    text-decoration: underline;
+    font-family: 'Lato';
+    font-size: inherit;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+.vehicle-card {
+    display: flex;
+    flex-direction: column;
+    border: solid #000;
+    border-width: 2px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px darkgrey;
+    margin-bottom: 10px;
+    width: 300px;
+    font-family: 'Lato';
+    font-size: inherit;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.vehicle-card:hover{
+    background: #122625;
+    color: #A93535;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.vehicles-delete{
+    cursor: pointer;
+    border: none;
+    font-family: 'Lato';
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    transition: transform .2s ease-in-out; 
+}
+.vehicles-delete:hover{
+    transform: scale(1.1); 
+}
+
+.vehicles-add{
+    border: none;
+    border-radius: 4px;
+    box-shadow: 3px 3px 3px 3px darkgrey;
+    font-family: 'Lato';
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    cursor: pointer;
+    padding: 25px 80px;
+    display: inline-block;
+    margin: 15px 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.vehicles-add {
+    background: #A93535;
+    color: #122625;
+  }
+  
+  .vehicles-add:hover {
+    background: #122625;
+    color: #A93535;
+  }
+  
+  .vehicles-add:active {
+    background: #122625;
+    top: 2px;
+  }
+  
+  .vehicles-add:before {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    line-height: 3;
+    font-size: 140%;
+    width: 60px;
+  }
