@@ -23,3 +23,13 @@ export const addVehicle = (newVehicle) => {
         body: JSON.stringify(newVehicle)
     }).then(response => response.json())
   }
+
+  export const update = (editedVehicle) => {
+    return fetch(`${remoteURL}/vehicles/${editedVehicle.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(editedVehicle)
+    }).then(data => data.json());
+  }
