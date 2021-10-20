@@ -8,6 +8,7 @@ import { PhotoGallery } from "./gallery/PhotoGallery"
 import { VehicleAdd } from "./vehicles/VehiclesAdd"
 import { VehicleEdit } from "./vehicles/VehicleEdit"
 import { UpcomingEventAdd } from "./upcoming/UpcomingEventAdd"
+import { UpcomingEventEdit } from "./upcoming/UpcomingEventEdit"
 
 export const ApplicationViews = () => {
   return (
@@ -35,6 +36,10 @@ export const ApplicationViews = () => {
       </Route>
       <Route exact path="/upcoming/add">
         <UpcomingEventAdd />
+      </Route>
+      <Route exact path="/upcoming/edit/:eventId(\d+)">
+        {/* Render the component for list of vehicles */}
+        <UpcomingEventEdit />
       </Route>
       <Route exact path="/past">
         {/* Render the component for the user's past */}

@@ -42,28 +42,20 @@
   "tasks": [],
   "events": [
     {
-      "id": 1,
-      "vehicleId": 3,
-      "eventName": "LowStyle Event",
-      "eventDesc": "Midpond event held by Jackson",
-      "eventDate": 1634744979076,
-      "eventTrack": "Midpond"
-    },
-    {
-      "vehicleId": 1,
-      "eventName": "Halloween Bash",
-      "eventDesc": "Halloween Bash at NSS",
-      "eventDate": 1634748217293,
-      "eventTrack": "Nashville Super Speedway",
-      "id": 2
-    },
-    {
-      "vehicleId": 1,
+      "id": 3,
+      "vehicleId": "1",
       "eventName": "DriftIndy Halloween Bash",
       "eventDesc": "Halloween Event by DriftIndy",
       "eventDate": "2021-10-30",
-      "eventTrack": "Indianapolis Motor Speedway",
-      "id": 3
+      "eventTrack": "Indianapolis Motor Speedway"
+    },
+    {
+      "id": 4,
+      "vehicleId": "3",
+      "eventName": "Test",
+      "eventDesc": "Test",
+      "eventDate": "2021-11-02",
+      "eventTrack": "test"
     }
   ],
   "photos": []

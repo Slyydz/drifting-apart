@@ -19,9 +19,9 @@ export const UpcomingEventCard = ({ event, handleDelete }) => {
                 <p>Car: {event.vehicle.year} {event.vehicle.make} {event.vehicle.model}</p>
                 <p>Track: {event.eventTrack}</p>
                 <div className="buttons-events">
-                    <button className="events-delete" onClick={() => history.push(`/events/tasks/${event.id}`)}>Show Tasks</button>
+                    <button className="events-delete" onClick={() => history.push(`/upcoming/tasks/${event.id}`)}>Show Tasks</button>
                     <button className="events-delete" onClick={() => handleDelete(event.id)}>Delete</button>
-                    <button className="events-edit" onClick={() => history.push(`/events/edit/${event.id}`)}>Edit</button>
+                    <button className="events-edit" onClick={() => history.push(`/upcoming/edit/${event.id}`)}>Edit</button>
                 </div>
             </div>
         </div>
