@@ -32,7 +32,7 @@ export const UpcomingEvents = () => {
       <>
         <div className="main-content">
           <h1 className="events-title">Upcoming Events:</h1>
-          <button className="events-add" onClick={() => history.push("/events/add")}>Add An Event +</button>
+          <button className="events-add" onClick={() => history.push("/upcoming/add")}>Add An Event +</button>
           <div className="events-none">
             <h3>No Events Yet</h3>
           </div>
@@ -45,7 +45,7 @@ export const UpcomingEvents = () => {
         <div className="main-content">
           <div className="scroll-box">
             <h1 className="events-title">Upcoming Events:</h1>
-            <button className="events-add" onClick={() => history.push("/events/add")}>Add An Event +</button>
+            <button className="events-add" onClick={() => history.push("/upcoming/add")}>Add An Event +</button>
             <div className="events-list">
               {events.map(event => <UpcomingEventCard key={event.id} event={event} handleDelete={handleDeleteEvent} />)}
             </div>

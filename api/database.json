@@ -25,13 +25,6 @@
       "userId": 1
     },
     {
-      "year": "1996",
-      "make": "Mazda",
-      "model": "Miata",
-      "userId": 1,
-      "id": 2
-    },
-    {
       "year": "2003",
       "make": "Nissan",
       "model": "350z",
@@ -50,11 +43,27 @@
   "events": [
     {
       "id": 1,
-      "vehicleId": 2,
+      "vehicleId": 3,
       "eventName": "LowStyle Event",
-      "eventDesc": "Midpond LowStyle event put on by Jackson",
-      "eventDate": 1634669116922,
-      "eventTrack": "Midpond Raceway"
+      "eventDesc": "Midpond event held by Jackson",
+      "eventDate": 1634744979076,
+      "eventTrack": "Midpond"
+    },
+    {
+      "vehicleId": 1,
+      "eventName": "Halloween Bash",
+      "eventDesc": "Halloween Bash at NSS",
+      "eventDate": 1634748217293,
+      "eventTrack": "Nashville Super Speedway",
+      "id": 2
+    },
+    {
+      "vehicleId": 1,
+      "eventName": "DriftIndy Halloween Bash",
+      "eventDesc": "Halloween Event by DriftIndy",
+      "eventDate": "2021-10-30",
+      "eventTrack": "Indianapolis Motor Speedway",
+      "id": 3
     }
   ],
   "photos": []
