@@ -39,3 +39,9 @@ export const addEvent = (newEvent) => {
       body: JSON.stringify(editedEvent)
     }).then(data => data.json());
   } 
+
+
+  export const getUserById = (userId) => {
+    return fetch(`${remoteURL}/users/${userId}`)
+      .then(res => res.json())
+  }
