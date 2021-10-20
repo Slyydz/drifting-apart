@@ -1,9 +1,22 @@
 import React from "react";
 import { useHistory } from "react-router";
+import { useEffect, useState } from "react/cjs/react.development";
+import { getUserById } from "./UpcomingEventManager";
 
 export const UpcomingEventCard = ({ event, handleDelete }) => {
 
     const history = useHistory();
+
+    const [user, setUser] = useState();
+
+    const getUser = () => {
+        getUserById(event.vehicle.userId)
+        .then(res => setUser(res.name))
+    }
+
+    useEffect(() => {
+        getUser();
+    }, [])
 
 
     const dateVar = new Date(event.eventDate);
@@ -13,6 +26,7 @@ export const UpcomingEventCard = ({ event, handleDelete }) => {
 
         <div className="card">
             <div className="event-card">
+                <h2>Posted by: {user}</h2>
                 <h3>Event: {event.eventName}</h3>
                 <h4>Description: {event.eventDesc}</h4>
                 <p>Date: {displayDate}</p>
