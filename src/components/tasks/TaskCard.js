@@ -12,7 +12,7 @@ export const TaskCard = ({task, handleDelete}) => {
                 <h2>{task.taskName}</h2>
                 <h4>{task.taskDesc}</h4>
                 <button className="tasks-delete" onClick={() => handleDelete(task.id)}>Delete</button>
-                {/* <button className="tasks-edit" onClick={() => history.push(`/tasks/edit/${task.id}`)}>Edit</button> */}
+                <button className="tasks-edit" onClick={() => history.push(`/upcoming/tasks/${task.eventId}/edit/${task.id}`)}>Edit</button>
               </div>
             </div>
           )
