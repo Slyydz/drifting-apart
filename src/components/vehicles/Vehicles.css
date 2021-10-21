@@ -30,14 +30,6 @@
     font-size: medium;
 }
 
-.vehicle-card:hover{
-    background: #122625;
-    color: #A93535;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    transition: all 0.5s;
-}
-
 .vehicles-delete{
     cursor: pointer;
     border: none;
