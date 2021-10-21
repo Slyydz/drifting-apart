@@ -7,12 +7,15 @@ import "../nav/NavBar.css"
 
 export const NavBar = () => {
 
-const history = useHistory();  
+  const history = useHistory();
 
   return (
     <nav className="nav__flex">
       <Link to="/"> <img className="logo" src={logo} alt="Drifting Apart Logo" /></Link>
       <ul className="nav">
+        <li className="nav__item">
+          <Link className="nav__link" to="/">Home</Link>
+        </li>
         <li className="nav__item">
           <Link className="nav__link" to="/vehicles">My Vehicles</Link>
         </li>
@@ -27,9 +30,9 @@ const history = useHistory();
         </li>
       </ul>
       <button className="nav__button" onClick={() => {
-            sessionStorage.removeItem("drifting_user");
-            history.push("/login")
-        }}>Logout</button>
+        sessionStorage.removeItem("drifting_user");
+        history.push("/login")
+      }}>Logout</button>
     </nav>
   )
 }
