@@ -39,7 +39,40 @@
       "id": 4
     }
   ],
-  "tasks": [],
+  "tasks": [
+    {
+      "id": 1,
+      "taskName": "Fluids",
+      "taskDesc": "Perform an oil change and power steering flush",
+      "userId": 1,
+      "eventId": 3,
+      "isCompleted": false
+    },
+    {
+      "id": 3,
+      "taskName": "Test",
+      "taskDesc": "Testing",
+      "userId": 3,
+      "eventId": 5,
+      "isCompleted": false
+    },
+    {
+      "taskName": "Tires",
+      "taskDesc": "Change Tires on SSR's",
+      "eventId": "3",
+      "userId": 1,
+      "isCompleted": false,
+      "id": 4
+    },
+    {
+      "taskName": "Spark Plugs",
+      "taskDesc": "Change the spark plugs",
+      "eventId": "3",
+      "userId": 1,
+      "isCompleted": false,
+      "id": 5
+    }
+  ],
   "events": [
     {
       "id": 3,
