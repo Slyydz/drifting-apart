@@ -43,10 +43,9 @@
     {
       "id": 1,
       "taskName": "Fluids",
-      "taskDesc": "Perform an oil change and power steering flush",
-      "userId": 1,
-      "eventId": 3,
-      "isCompleted": false
+      "taskDesc": "Perform an oil change and transmission fluid flush and change",
+      "eventId": "3",
+      "userId": 1
     },
     {
       "id": 3,
@@ -57,20 +56,26 @@
       "isCompleted": false
     },
     {
+      "id": 4,
       "taskName": "Tires",
-      "taskDesc": "Change Tires on SSR's",
+      "taskDesc": "Change Tires on Z wheels and SSR's",
       "eventId": "3",
-      "userId": 1,
-      "isCompleted": false,
-      "id": 4
+      "userId": 1
     },
     {
+      "id": 5,
       "taskName": "Spark Plugs",
-      "taskDesc": "Change the spark plugs",
+      "taskDesc": "Change the spark plugs (BKR7E)",
+      "eventId": "3",
+      "userId": 1
+    },
+    {
+      "taskName": "Bolt Check",
+      "taskDesc": "Check all of the bolts in the rear suspension",
       "eventId": "3",
       "userId": 1,
       "isCompleted": false,
-      "id": 5
+      "id": 6
     }
   ],
   "events": [
