@@ -32,7 +32,7 @@ export const PastEventCard = ({pastEvent}) => {
                 <p>Car: {pastEvent.vehicle.year} {pastEvent.vehicle.make} {pastEvent.vehicle.model}</p>
                 <p>Track: {pastEvent.eventTrack}</p>
                 <div className="buttons-events">
-                    <button className="events-delete" onClick={() => history.push(`/upcoming/tasks/${pastEvent.id}`)}>Show Tasks</button>
+                    <button className="events-delete" onClick={() => history.push(`/past/tasks/${pastEvent.id}`)}>Show Tasks</button>
                     {/* <button className="events-delete" onClick={() => handleDelete(pastEvent.id)}>Delete</button> */}
                 </div>
             </div>

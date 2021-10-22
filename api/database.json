@@ -76,6 +76,14 @@
       "userId": 1,
       "isCompleted": false,
       "id": 6
+    },
+    {
+      "taskName": "Bolt Check",
+      "taskDesc": "Check all of the bolts in the rear suspension",
+      "eventId": "6",
+      "userId": 1,
+      "isCompleted": false,
+      "id": 6
     }
   ],
   "events": [
