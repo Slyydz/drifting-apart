@@ -12,11 +12,19 @@ export const UpcomingEvents = () => {
   const history = useHistory();
 
   const getEventsDom = () => {
-    getEvents()
-      .then(res => {
-        setEvents(res);
+    const today = new Date();
+    const parsedToday = today.getTime();
+    return getEvents().then(eventsFromAPI => {
+      const copyOfEvents = [...eventsFromAPI]
+      const futureDatedEvents = copyOfEvents.filter(function (evt) {
+          let evtDate = Date.parse(evt.eventDate);
+          if (evtDate > parsedToday) {
+            return evt
+          }
       })
-  }
+      setEvents(futureDatedEvents);
+    }); 
+  };
 
   const handleDeleteEvent = (eventId) => {
     deleteEvent(eventId).then(() => getEventsDom())
