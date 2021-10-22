@@ -1,1 +1,44 @@
 @import "../BackBlock.css";
+
+.task-card {
+    margin-bottom: 10px;
+    width: 470px;;
+}
+
+.incomplete{
+    text-decoration: underline;
+}
+
+.complete{
+    text-decoration: underline;
+}
+
+.card-task {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #DEDEDE;
+    border: solid #000;
+    border-width: 2px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px darkgrey;
+    margin-bottom: 10px;
+    width: 470px;
+    font-family: 'Lato';
+    font-size: inherit;
+    font-weight: bold;
+    font-size: medium;
+}
+
+button{
+    cursor: pointer;
+    border: none;
+    font-family: 'Lato';
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    transition: transform .2s ease-in-out; 
+}
+button:hover{
+    transform: scale(1.1); 
+}

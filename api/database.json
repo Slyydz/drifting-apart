@@ -45,7 +45,8 @@
       "taskName": "Fluids",
       "taskDesc": "Perform an oil change and transmission fluid flush and change",
       "eventId": "3",
-      "userId": 1
+      "userId": 1,
+      "isCompleted": false
     },
     {
       "id": 3,
@@ -60,22 +61,24 @@
       "taskName": "Tires",
       "taskDesc": "Change Tires on Z wheels and SSR's",
       "eventId": "3",
-      "userId": 1
+      "userId": 1,
+      "isCompleted": false
     },
     {
       "id": 5,
       "taskName": "Spark Plugs",
       "taskDesc": "Change the spark plugs (BKR7E)",
       "eventId": "3",
-      "userId": 1
+      "userId": 1,
+      "isCompleted": false
     },
     {
+      "id": 6,
       "taskName": "Bolt Check",
       "taskDesc": "Check all of the bolts in the rear suspension",
       "eventId": "3",
       "userId": 1,
-      "isCompleted": false,
-      "id": 6
+      "isCompleted": false
     },
     {
       "taskName": "Bolt Check",
@@ -84,6 +87,14 @@
       "userId": 1,
       "isCompleted": false,
       "id": 6
+    },
+    {
+      "id": 7,
+      "taskName": "Clean wheels",
+      "taskDesc": "Clean wheels before event for parade lap",
+      "eventId": "4",
+      "userId": 1,
+      "isCompleted": true
     }
   ],
   "events": [
