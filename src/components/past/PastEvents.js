@@ -33,7 +33,7 @@ export const PastEvents = () => {
     return (
       <>
         <div className="main-content">
-          <h1 className="events-title">Upcoming Events:</h1>
+          <h1 className="events-title">Past Events:</h1>
           <button className="events-add" onClick={() => history.push("/upcoming/add")}>Add An Event +</button>
           <div className="events-none">
             <h3>No Events Yet</h3>
@@ -45,18 +45,18 @@ export const PastEvents = () => {
   } else {
 
     return (
-      
-        <>
-          <div className="main-content">
-            <div className="scroll-box">
-              <h1 className="events-title">Upcoming Events:</h1>
-              <div className="events-list">
-                {pastEvents.map(pastEvent => <PastEventCard key={pastEvent.id} pastEvent={pastEvent} />)}
-              </div>
+
+      <>
+        <div className="main-content">
+          <div className="scroll-box">
+            <h1 className="events-title">Past Events:</h1>
+            <div className="events-list">
+              {pastEvents.map(pastEvent => <PastEventCard key={pastEvent.id} pastEvent={pastEvent} />)}
             </div>
           </div>
-        </>
-     
+        </div>
+      </>
+
     )
   }
 
