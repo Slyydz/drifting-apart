@@ -12,6 +12,7 @@ import { UpcomingEventEdit } from "./upcoming/UpcomingEventEdit"
 import { Tasks } from "./tasks/Tasks"
 import { TaskAdd } from "./tasks/TaskAdd"
 import { TaskEdit } from "./tasks/TaskEdit"
+import { PastTasks } from "./tasks/PastTask"
 
 export const ApplicationViews = () => {
   return (
@@ -63,6 +64,10 @@ export const ApplicationViews = () => {
       <Route exact path="/past">
         {/* Render the component for the user's past */}
         <PastEvents />
+      </Route>
+      <Route exact path="/past/tasks/:eventParams(\d+)">
+        {/* Render the component for list of vehicles */}
+        <PastTasks />
       </Route>
 
       <Route exact path="/gallery">

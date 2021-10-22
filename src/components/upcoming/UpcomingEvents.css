@@ -36,6 +36,23 @@
     font-size: medium;
 }
 
+.pastEvent-card {
+    display: flex;
+    background: #DEDEDE;
+    flex-direction: column;
+    border: solid #000;
+    border-width: 2px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px darkgrey;
+    margin-bottom: 10px;
+    width: 400px;
+    height: auto;
+    font-family: 'Lato';
+    font-size: inherit;
+    font-weight: bold;
+    font-size: medium;
+}
+
 
 .events-delete{
     cursor: pointer;

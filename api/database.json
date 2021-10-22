@@ -76,6 +76,14 @@
       "userId": 1,
       "isCompleted": false,
       "id": 6
+    },
+    {
+      "taskName": "Bolt Check",
+      "taskDesc": "Check all of the bolts in the rear suspension",
+      "eventId": "6",
+      "userId": 1,
+      "isCompleted": false,
+      "id": 6
     }
   ],
   "events": [
@@ -102,6 +110,14 @@
       "eventDate": "2021-10-23",
       "eventTrack": "test",
       "id": 5
+    },
+    {
+      "vehicleId": 1,
+      "eventName": "Test",
+      "eventDesc": "Test",
+      "eventDate": "2021-10-13",
+      "eventTrack": "Nashville Super Speedway",
+      "id": 6
     }
   ],
   "photos": []
