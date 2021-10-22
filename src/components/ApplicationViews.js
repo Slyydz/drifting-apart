@@ -11,6 +11,7 @@ import { UpcomingEventAdd } from "./upcoming/UpcomingEventAdd"
 import { UpcomingEventEdit } from "./upcoming/UpcomingEventEdit"
 import { Tasks } from "./tasks/Tasks"
 import { TaskAdd } from "./tasks/TaskAdd"
+import { TaskEdit } from "./tasks/TaskEdit"
 
 export const ApplicationViews = () => {
   return (
@@ -49,6 +50,10 @@ export const ApplicationViews = () => {
       <Route exact path="/upcoming/tasks/:eventId(\d+)">
         {/* Render the component for list of vehicles */}
         <Tasks />
+      </Route>
+      <Route exact path="/upcoming/tasks/:eventId(\d+)/edit/:taskId(\d+)">
+        {/* Render the component for list of vehicles */}
+        <TaskEdit />
       </Route>
       <Route exact path="/tasks/add/:eventParam(\d+)">
         {/* Render the component for list of vehicles */}
