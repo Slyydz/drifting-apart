@@ -20,7 +20,7 @@ export const UpcomingEventCard = ({ event, handleDelete }) => {
 
 
     const dateVar = new Date(event.eventDate);
-    const displayDate = dateVar.toLocaleDateString()
+    const displayDate = dateVar.toLocaleDateString();
 
     return (
 
