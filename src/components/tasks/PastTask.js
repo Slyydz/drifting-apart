@@ -13,12 +13,9 @@ export const PastTasks = () => {
 
     const { eventParams } = useParams();
 
-    console.log(eventParams);
-
     const getTasks = () => {
         getTasksByEventId(eventParams)
             .then(res => {
-                console.log(res)
                 setTasks(res);
             });
     }
