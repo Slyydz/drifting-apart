@@ -20,7 +20,6 @@ export const PastTasks = () => {
             .then(res => {
                 console.log(res)
                 setTasks(res);
-
             });
     }
 
@@ -33,7 +32,7 @@ export const PastTasks = () => {
             <div className="scroll-box">
                 <h1 className="tasks-title">Tasks:</h1>
                 <div className="tasks-list">
-                    {taskState.length == 0 ? <h2>No Tasks Yet</h2> : taskState.map(task => <PastTaskCard key={task.id} task={task}/>)}
+                    {taskState.length == 0 ? <h2>No Tasks Yet</h2> : taskState.map(task => <PastTaskCard key={task.id} task={task} />)}
                 </div>
             </div>
         </div>

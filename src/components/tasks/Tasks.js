@@ -7,7 +7,8 @@ import "./Tasks.css"
 
 export const Tasks = () => {
 
-    const [taskState, setTasks] = useState([]);
+    const [taskIncomplete, setTasks] = useState([]);
+    const [taskComplete, setComplete] = useState([])
 
     const history = useHistory();
 
@@ -15,7 +16,11 @@ export const Tasks = () => {
 
     const getTasks = () => {
         getTasksByEventId(eventId)
-            .then(res => setTasks(res));
+            .then(res => {
+                setComplete(res.filter(taco => taco.isCompleted))
+                setTasks(res.filter(taco => taco.isCompleted != true))
+
+            });
     }
 
     const handleDelete = (taskId) => {
@@ -25,7 +30,8 @@ export const Tasks = () => {
 
     useEffect(() => {
         getTasks();
-        console.log(taskState);
+        console.log(taskIncomplete);
+        console.log(taskComplete)
     }, [])
 
     return (
@@ -33,8 +39,13 @@ export const Tasks = () => {
             <div className="scroll-box">
                 <h1 className="tasks-title">Tasks:</h1>
                 <button className="tasks-add" onClick={() => history.push(`/tasks/add/${eventId}`)}>Add A Task +</button>
-                <div className="tasks-list">
-                    { taskState.length == 0 ? <h2>No Tasks Yet</h2> : taskState.map(task => <TaskCard key={task.id} task={task} handleDelete={handleDelete}/>)}
+                <h2 className="incomplete">Incomplete Tasks:</h2>
+                <div className="incomplete-tasks-list">
+                    {taskIncomplete.length == 0 ? <h2>No Incomplete Tasks</h2> : taskIncomplete.map(task => <TaskCard key={task.id} task={task} handleDelete={handleDelete} getTasks={getTasks} />)}
+                </div>
+                <h2 className="complete">Completed Tasks:</h2>
+                <div className="complete-tasks-list">
+                    {taskComplete.length == 0 ? <h2>No Completed Tasks</h2> : taskComplete.map(task => <TaskCard key={task.id} task={task} handleDelete={handleDelete} getTasks={getTasks} />)}
                 </div>
             </div>
         </div>
