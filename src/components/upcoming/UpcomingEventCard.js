@@ -7,11 +7,11 @@ export const UpcomingEventCard = ({ event, handleDelete }) => {
 
     const history = useHistory();
 
-    const [user, setUser] = useState();
+    const [user, setUser] = useState({ name: "" });
 
     const getUser = () => {
         getUserById(event.vehicle.userId)
-        .then(res => setUser(res.name))
+            .then(res => setUser(res))
     }
 
     useEffect(() => {
@@ -26,16 +26,18 @@ export const UpcomingEventCard = ({ event, handleDelete }) => {
 
         <div className="card">
             <div className="event-card">
-                <h2>Posted by: {user}</h2>
+                <h2>Posted by: {user.name}</h2>
                 <h3>Event: {event.eventName}</h3>
                 <h4>Description: {event.eventDesc}</h4>
                 <p>Date: {displayDate}</p>
                 <p>Car: {event.vehicle.year} {event.vehicle.make} {event.vehicle.model}</p>
                 <p>Track: {event.eventTrack}</p>
                 <div className="buttons-events">
-                    <button className="events-delete" onClick={() => history.push(`/upcoming/tasks/${event.id}`)}>Show Tasks</button>
-                    <button className="events-delete" onClick={() => handleDelete(event.id)}>Delete</button>
-                    <button className="events-edit" onClick={() => history.push(`/upcoming/edit/${event.id}`)}>Edit</button>
+                    {user.id == parseInt(sessionStorage.getItem("drifting_user")) ? <><button className="events-delete" onClick={() => history.push(`/upcoming/tasks/${event.id}`)}>Show Tasks</button>
+                        <button className="events-delete" onClick={() => handleDelete(event.id)}>Delete</button>
+                        <button className="events-edit" onClick={() => history.push(`/upcoming/edit/${event.id}`)}>Edit</button> </> :
+                        <button className="events-delete" onClick={() => history.push(`/upcoming/tasks/${event.id}`)}>Show Tasks</button>}
+
                 </div>
             </div>
         </div>

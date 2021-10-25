@@ -92,7 +92,7 @@ export const UpcomingEventAdd = () => {
             </fieldset>
             <button className="btn-add-save"
                 onClick={handleClickSaveEvent}>
-                Save Vehicle
+                Save Event
             </button>
             <button className="btn-add-cancel"
                 onClick={() => history.push("/upcoming")}>

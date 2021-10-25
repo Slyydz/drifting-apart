@@ -5,14 +5,14 @@ import { addTask } from './TaskManager';
 
 export const TaskAdd = () => {
 
-    const { eventParam } = useParams();
+	const { eventParam } = useParams();
 
 	const [task, setTask] = useState({
 		taskName: "",
 		taskDesc: "",
 		eventId: eventParam,
 		userId: parseInt(sessionStorage.getItem("drifting_user")),
-        isCompleted: false
+		isCompleted: false
 	});
 
 	const history = useHistory();
@@ -33,15 +33,15 @@ export const TaskAdd = () => {
 	const handleClickSaveEvent = (event) => {
 		event.preventDefault() //Prevents the browser from submitting the form
 
-			addTask(task)
-				.then(() => history.push(`/upcoming/tasks/${eventParam}`))
-		
+		addTask(task)
+			.then(() => history.push(`/upcoming/tasks/${eventParam}`))
+
 	}
 
 	return (
 		<form className="VehicleForm">
 			<h2 className="VehicleForm__title">New Vehicle</h2>
-            <fieldset>
+			<fieldset>
 				<div className="form-group">
 					<label htmlFor="taskName">Task Name:</label>
 					<input type="text" id="taskName" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Task Name" value={task.taskName} />
@@ -55,12 +55,12 @@ export const TaskAdd = () => {
 			</fieldset>
 			<button className="btn-add-save"
 				onClick={handleClickSaveEvent}>
-				Save Vehicle
-          </button>
-          <button className="btn-add-edit"
+				Save Task
+			</button>
+			<button className="btn-add-edit"
 				onClick={() => history.push(`/upcoming/tasks/${eventParam}`)}>
 				Cancel
-          </button>
+			</button>
 		</form>
 	)
 };
