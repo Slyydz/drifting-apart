@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { update, getVehicleById } from "./VehicleManager";
+import { update, getVehicleByIdSolo } from "./VehicleManager";
 import { useParams, useHistory } from "react-router-dom"
 
 export const VehicleEdit = () => {
@@ -21,7 +21,7 @@ export const VehicleEdit = () => {
         setIsLoading(true);
 
         // This is an edit, so we need the id
-        const editedAnimal = {
+        const editedVehicle = {
             id: vehicleId,
             year: vehicle.year,
             make: vehicle.make,
@@ -29,15 +29,16 @@ export const VehicleEdit = () => {
             userId: parseInt(sessionStorage.getItem("drifting_user"))
         };
 
-        update(editedAnimal)
+        update(editedVehicle)
             .then(() => history.push("/vehicles")
             )
     }
 
     useEffect(() => {
-        getVehicleById(vehicleId)
-            .then(vehicle => {
-                setVehicle(vehicle);
+        getVehicleByIdSolo(vehicleId)
+            .then(veh => {
+                console.log(veh)
+                setVehicle(veh);
                 setIsLoading(false);
             });
     }, []);

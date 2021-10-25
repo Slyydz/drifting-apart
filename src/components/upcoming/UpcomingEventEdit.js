@@ -7,7 +7,13 @@ import { update } from "./UpcomingEventManager";
 
 export const UpcomingEventEdit = () => {
 
-    const [eventState, setEvent] = useState({});
+    const [eventState, setEvent] = useState({
+        vehicleId: "",
+        eventName: "",
+        eventDesc: "",
+        eventDate: "",
+        eventTrack: "",
+    });
 
     const [vehicleId, setVehicle] = useState([]);
 
@@ -46,6 +52,7 @@ export const UpcomingEventEdit = () => {
     useEffect(() => {
         getEventsById(eventId)
             .then(evt => {
+                console.log(evt)
                 setEvent(evt);
                 setIsLoading(false);
             });
@@ -56,72 +63,72 @@ export const UpcomingEventEdit = () => {
             });
     }, []);
 
-        return (
-            <>
-                <form>
-                    <fieldset>
-    
-                        <div className="formgrid">
-                            <label htmlFor="eventName">Event Name:</label>
-                            <input
-                                type="text"
-                                required
-                                className="form-control"
-                                onChange={handleFieldChange}
-                                id="eventName"
-                                value={eventState.eventName}
-                            />
-    
-                            <label htmlFor="eventDesc">Event Description:</label>
-                            <input
-                                type="text"
-                                required
-                                className="form-control"
-                                onChange={handleFieldChange}
-                                id="eventDesc"
-                                value={eventState.eventDesc}
-                            />
-    
-                            <label htmlFor="eventDesc">Event Date:</label>
-                            <input
-                                type="date"
-                                required
-                                className="form-control"
-                                onChange={handleFieldChange}
-                                id="eventDate"
-                                value={eventState.eventDate}
-                            />
-                            <label htmlFor="vehicleId">Vehicle: </label>
-                            <select value={eventState.vehicleId} name="vehicle" id="vehicleId" onChange={handleFieldChange} className="form-control" >
-                                <option value="0">Select a vehicle</option>
-                                {vehicleId.map(vehicle => (
-                                    <option key={vehicle.id} value={vehicle.id}>
-                                        {vehicle.year} {vehicle.make} {vehicle.model}
-                                    </option>
-                                ))}
-                            </select>
-                            <label htmlFor="model">Event Track:</label>
-                            <input
-                                type="text"
-                                required
-                                className="form-control"
-                                onChange={handleFieldChange}
-                                id="eventTrack"
-                                value={eventState.eventTrack}
-                            />
-                        </div>
-                        <button
-                            type="button" disabled={isLoading}
-                            onClick={updateExistingEvent}
-                            className="btn-edit-save"
-                        >Submit</button>
-                        <button
-                            type="button" disabled={isLoading}
-                            onClick={() => history.push("/upcoming")}
-                            className="btn-edit-cancel"
-                        >Cancel</button>
-                    </fieldset>
-                </form>
-            </>
-        );
-    }
+    return (
+        <>
+            <form>
+                <fieldset>
+
+                    <div className="formgrid">
+                        <label htmlFor="eventName">Event Name:</label>
+                        <input
+                            type="text"
+                            required
+                            className="form-control"
+                            onChange={handleFieldChange}
+                            id="eventName"
+                            value={eventState.eventName}
+                        />
+
+                        <label htmlFor="eventDesc">Event Description:</label>
+                        <input
+                            type="text"
+                            required
+                            className="form-control"
+                            onChange={handleFieldChange}
+                            id="eventDesc"
+                            value={eventState.eventDesc}
+                        />
+
+                        <label htmlFor="eventDesc">Event Date:</label>
+                        <input
+                            type="date"
+                            required
+                            className="form-control"
+                            onChange={handleFieldChange}
+                            id="eventDate"
+                            value={eventState.eventDate}
+                        />
+                        <label htmlFor="vehicleId">Vehicle: </label>
+                        <select value={eventState.vehicleId} name="vehicle" id="vehicleId" onChange={handleFieldChange} className="form-control" >
+                            <option value="0">Select a vehicle</option>
+                            {vehicleId.map(vehicle => (
+                                <option key={vehicle.id} value={vehicle.id}>
+                                    {vehicle.year} {vehicle.make} {vehicle.model}
+                                </option>
+                            ))}
+                        </select>
+                        <label htmlFor="model">Event Track:</label>
+                        <input
+                            type="text"
+                            required
+                            className="form-control"
+                            onChange={handleFieldChange}
+                            id="eventTrack"
+                            value={eventState.eventTrack}
+                        />
+                    </div>
+                    <button
+                        type="button" disabled={isLoading}
+                        onClick={updateExistingEvent}
+                        className="btn-edit-save"
+                    >Submit</button>
+                    <button
+                        type="button" disabled={isLoading}
+                        onClick={() => history.push("/upcoming")}
+                        className="btn-edit-cancel"
+                    >Cancel</button>
+                </fieldset>
+            </form>
+        </>
+    );
+}

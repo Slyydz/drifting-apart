@@ -4,12 +4,16 @@ import { update, getTasksById } from "./TaskManager";
 import { useParams, useHistory } from "react-router-dom"
 
 export const TaskEdit = () => {
-    const [task, setTask] = useState({ taskName: "", taskDesc: "" });
+    const { eventId } = useParams();
+
+    const [task, setTask] = useState({
+        taskName: "", taskDesc: "", eventId: eventId,
+        userId: parseInt(sessionStorage.getItem("drifting_user"))
+    });
 
     const [isLoading, setIsLoading] = useState(false);
 
     const { taskId } = useParams();
-    const { eventId } = useParams();
     const history = useHistory();
 
     const handleFieldChange = evt => {

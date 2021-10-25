@@ -14,7 +14,7 @@ export const getPastEvents = () => {
 
 export const getEventsById = (eventId) => {
   //be sure your animals have good data and related to a location and customer
-  return fetch(`${remoteURL}/events/?${eventId}&_expand=vehicle`)
+  return fetch(`${remoteURL}/events/${eventId}?_expand=vehicle`)
     .then(res => res.json())
 }
 
