@@ -31,8 +31,8 @@ export const PastEvents = () => {
   return (
     <>
       <div className="main-content">
+        <h1 className="events-title">Past Events:</h1>
         <div className="scroll-box">
-          <h1 className="events-title">Past Events:</h1>
           <div className="events-list">
             {pastEvents.length !== 0 ? pastEvents.map(pastEvent => <PastEventCard key={pastEvent.id} pastEvent={pastEvent} />) : <h2>No Past Events</h2>}
           </div>
