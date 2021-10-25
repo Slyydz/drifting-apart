@@ -29,15 +29,15 @@ export const VehicleAdd = () => {
 	const handleClickSaveVehicle = (event) => {
 		event.preventDefault() //Prevents the browser from submitting the form
 
-			addVehicle(vehicle)
-				.then(() => history.push("/vehicles"))
-		
+		addVehicle(vehicle)
+			.then(() => history.push("/vehicles"))
+
 	}
 
 	return (
 		<form className="VehicleForm">
 			<h2 className="VehicleForm__title">New Vehicle</h2>
-            <fieldset>
+			<fieldset>
 				<div className="form-group">
 					<label htmlFor="year">Vehicle year:</label>
 					<input type="text" id="year" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Vehicle year" value={vehicle.year} />
@@ -58,11 +58,11 @@ export const VehicleAdd = () => {
 			<button className="btn-add-save"
 				onClick={handleClickSaveVehicle}>
 				Save Vehicle
-          </button>
-          <button className="btn-add-edit"
+			</button>
+			<button className="btn-add-edit"
 				onClick={() => history.push("/vehicles")}>
 				Cancel
-          </button>
+			</button>
 		</form>
 	)
 };

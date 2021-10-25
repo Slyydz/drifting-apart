@@ -30,10 +30,6 @@ export const UpcomingEvents = () => {
     deleteEvent(eventId).then(() => getEventsDom())
   }
 
-  // const displayData = ({events}) => {
-  //   {events.length === 0 ?  events.map(event => <UpcomingEventCard key={event.id} event={event} handleDelete={handleDeleteEvent} />)  : <h2>No Events Yet</h2>}
-  // }
-
   useEffect(() => {
     getEventsDom();
   }, [])
