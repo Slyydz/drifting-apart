@@ -30,15 +30,14 @@ export const Tasks = () => {
 
     useEffect(() => {
         getTasks();
-        console.log(taskIncomplete);
-        console.log(taskComplete);
     }, [])
 
     return (
         <div className="main-content">
+            <h1 className="tasks-title">Tasks:</h1>
+            <button className="tasks-add" onClick={() => history.push(`/tasks/add/${eventId}`)}>Add A Task +</button>
             <div className="scroll-box">
-                <h1 className="tasks-title">Tasks:</h1>
-                <button className="tasks-add" onClick={() => history.push(`/tasks/add/${eventId}`)}>Add A Task +</button>
+
                 <h2 className="incomplete">Incomplete Tasks:</h2>
                 <div className="incomplete-tasks-list">
                     {taskIncomplete.length == 0 ? <h2>No Incomplete Tasks</h2> : taskIncomplete.map(task => <TaskCard key={task.id} task={task} handleDelete={handleDelete} getTasks={getTasks} />)}

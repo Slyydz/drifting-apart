@@ -36,7 +36,12 @@
 
 .nav__button {
     font-weight: bolder;
+    font-family: 'Lato';
+    font-size: inherit;
+    font-weight: bold;
+    font-size: large;
     text-decoration: none;
+    color: Black;
     cursor: pointer;
     border: none;
     background: #DBD7D7;

@@ -28,37 +28,18 @@ export const PastEvents = () => {
     getPastEventsDom();
   }, [])
 
-  if (pastEvents.length == 0) {
-
-    return (
-      <>
-        <div className="main-content">
+  return (
+    <>
+      <div className="main-content">
+        <div className="scroll-box">
           <h1 className="events-title">Past Events:</h1>
-          <button className="events-add" onClick={() => history.push("/upcoming/add")}>Add An Event +</button>
-          <div className="events-none">
-            <h3>No Events Yet</h3>
+          <div className="events-list">
+            {pastEvents.length !== 0 ? pastEvents.map(pastEvent => <PastEventCard key={pastEvent.id} pastEvent={pastEvent} />) : <h2>No Past Events</h2>}
           </div>
         </div>
-      </>
-    );
-
-  } else {
-
-    return (
-
-      <>
-        <div className="main-content">
-          <div className="scroll-box">
-            <h1 className="events-title">Past Events:</h1>
-            <div className="events-list">
-              {pastEvents.map(pastEvent => <PastEventCard key={pastEvent.id} pastEvent={pastEvent} />)}
-            </div>
-          </div>
-        </div>
-      </>
-
-    )
-  }
+      </div>
+    </>
+  )
 
 
 
