@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getEvents } from "../upcoming/UpcomingEventManager";
+import { getPastEvents } from "../upcoming/UpcomingEventManager";
 import { PastEventCard } from "./PastEventCard";
 import "../upcoming/UpcomingEvents.css"
 import { useHistory } from "react-router";
@@ -12,7 +12,7 @@ export const PastEvents = () => {
   const getPastEventsDom = () => {
     const today = new Date();
     const parsedToday = today.getTime();
-    return getEvents().then(eventsFromAPI => {
+    return getPastEvents().then(eventsFromAPI => {
       const copyOfEvents = [...eventsFromAPI]
       const futureDatedEvents = copyOfEvents.filter(function (evt) {
         let evtDate = Date.parse(evt.eventDate);

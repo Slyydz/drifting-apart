@@ -3,8 +3,8 @@ import { update, getVehicleById } from "./VehicleManager";
 import { useParams, useHistory } from "react-router-dom"
 
 export const VehicleEdit = () => {
-    const [vehicle, setVehicle] = useState({ year: "", make: "", model: ""});
-    
+    const [vehicle, setVehicle] = useState({ year: "", make: "", model: "", userId: parseInt(sessionStorage.getItem("drifting_user")) });
+
     const [isLoading, setIsLoading] = useState(false);
 
     const { vehicleId } = useParams();
@@ -16,7 +16,7 @@ export const VehicleEdit = () => {
         setVehicle(stateToChange);
     };
 
-    const updateExistingAnimal = evt => {
+    const updateExistingVehicle = evt => {
         evt.preventDefault()
         setIsLoading(true);
 
@@ -47,8 +47,8 @@ export const VehicleEdit = () => {
             <form>
                 <fieldset>
                     <div className="formgrid">
-                    <label htmlFor="year">Vehicle Year:</label>
-                    <input
+                        <label htmlFor="year">Vehicle Year:</label>
+                        <input
                             type="text"
                             required
                             className="form-control"
@@ -56,7 +56,7 @@ export const VehicleEdit = () => {
                             id="year"
                             value={vehicle.year}
                         />
-                        
+
                         <label htmlFor="make">Vehicle Make:</label>
                         <input
                             type="text"
@@ -66,7 +66,7 @@ export const VehicleEdit = () => {
                             id="make"
                             value={vehicle.make}
                         />
-                        
+
                         <label htmlFor="model">Model:</label>
                         <input
                             type="text"
@@ -77,16 +77,16 @@ export const VehicleEdit = () => {
                             value={vehicle.model}
                         />
                     </div>
-                        <button
-                            type="button" disabled={isLoading}
-                            onClick={updateExistingAnimal}
-                            className="btn-edit-save"
-                        >Submit</button>
-                        <button
-                            type="button" disabled={isLoading}
-                            onClick={() => history.push("/vehicles")}
-                            className="btn-edit-cancel"
-                        >Cancel</button>
+                    <button
+                        type="button" disabled={isLoading}
+                        onClick={updateExistingVehicle}
+                        className="btn-edit-save"
+                    >Submit</button>
+                    <button
+                        type="button" disabled={isLoading}
+                        onClick={() => history.push("/vehicles")}
+                        className="btn-edit-cancel"
+                    >Cancel</button>
                 </fieldset>
             </form>
         </>
