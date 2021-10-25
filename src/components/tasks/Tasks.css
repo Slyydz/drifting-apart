@@ -1,5 +1,13 @@
 @import "../BackBlock.css";
 
+.tasks-title{
+    text-decoration: underline;
+    font-family: 'Lato';
+    font-size: inherit;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
 .task-card {
     margin-bottom: 10px;
     width: 470px;;
@@ -7,10 +15,18 @@
 
 .incomplete{
     text-decoration: underline;
+    font-family: 'Lato';
+    font-size: inherit;
+    font-weight: bolder;
+    font-size: x-large;
 }
 
 .complete{
     text-decoration: underline;
+    font-family: 'Lato';
+    font-size: inherit;
+    font-weight: bolder;
+    font-size: x-large;
 }
 
 .card-task {
@@ -100,3 +116,16 @@
     width: 60px;
   }
 
+  .scroll-box::-webkit-scrollbar {
+    width: 13px;
+  }
+  
+  .scroll-box::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+   
+  .scroll-box::-webkit-scrollbar-thumb {
+    background: #122625; 
+    border-radius: 10px;
+  }

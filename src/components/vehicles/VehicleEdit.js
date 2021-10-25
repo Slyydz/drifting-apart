@@ -37,7 +37,6 @@ export const VehicleEdit = () => {
     useEffect(() => {
         getVehicleByIdSolo(vehicleId)
             .then(veh => {
-                console.log(veh)
                 setVehicle(veh);
                 setIsLoading(false);
             });

@@ -17,49 +17,40 @@ export const UpcomingEvents = () => {
     return getEvents().then(eventsFromAPI => {
       const copyOfEvents = [...eventsFromAPI]
       const futureDatedEvents = copyOfEvents.filter(function (evt) {
-          let evtDate = Date.parse(evt.eventDate);
-          if (evtDate > parsedToday) {
-            return evt
-          }
+        let evtDate = Date.parse(evt.eventDate);
+        if (evtDate > parsedToday) {
+          return evt;
+        }
       })
       setEvents(futureDatedEvents);
-    }); 
+    });
   };
 
   const handleDeleteEvent = (eventId) => {
     deleteEvent(eventId).then(() => getEventsDom())
   }
 
+  // const displayData = ({events}) => {
+  //   {events.length === 0 ?  events.map(event => <UpcomingEventCard key={event.id} event={event} handleDelete={handleDeleteEvent} />)  : <h2>No Events Yet</h2>}
+  // }
+
   useEffect(() => {
     getEventsDom();
   }, [])
 
 
-  if (events.length == 0) {
-    return (
-      <>
-        <div className="main-content">
-          <h1 className="events-title">Upcoming Events:</h1>
-          <button className="events-add" onClick={() => history.push("/upcoming/add")}>Add An Event +</button>
-          <div className="events-none">
-            <h3>No Events Yet</h3>
+  return (
+    <>
+      <div className="main-content">
+        <h1 className="events-title">Upcoming Events:</h1>
+        <button className="events-add" onClick={() => history.push("/upcoming/add")}>Add An Event +</button>
+        <div className="scroll-box">
+          <div className="events-list">
+            {events.length !== 0 ? events.map(event => <UpcomingEventCard key={event.id} event={event} handleDelete={handleDeleteEvent} />) : <h2>No Events Yet</h2>}
           </div>
         </div>
-      </>
-    );
-  } else {
-    return (
-      <>
-        <div className="main-content">
-          <div className="scroll-box">
-            <h1 className="events-title">Upcoming Events:</h1>
-            <button className="events-add" onClick={() => history.push("/upcoming/add")}>Add An Event +</button>
-            <div className="events-list">
-              {events.map(event => <UpcomingEventCard key={event.id} event={event} handleDelete={handleDeleteEvent} />)}
-            </div>
-          </div>
-        </div>
-      </>
-    );
-  }
+      </div>
+    </>
+  );
+
 }

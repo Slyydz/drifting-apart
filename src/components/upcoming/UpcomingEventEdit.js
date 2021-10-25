@@ -52,7 +52,6 @@ export const UpcomingEventEdit = () => {
     useEffect(() => {
         getEventsById(eventId)
             .then(evt => {
-                console.log(evt)
                 setEvent(evt);
                 setIsLoading(false);
             });
