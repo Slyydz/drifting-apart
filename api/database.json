@@ -37,6 +37,20 @@
       "model": "Terry Cruze",
       "userId": 3,
       "id": 4
+    },
+    {
+      "year": "1996",
+      "make": "Mazda ",
+      "model": "Miata",
+      "userId": 1,
+      "id": 5
+    },
+    {
+      "id": 6,
+      "year": "Testing",
+      "make": "Second ",
+      "model": "User",
+      "userId": 2
     }
   ],
   "tasks": [
@@ -70,7 +84,7 @@
       "taskDesc": "Change the spark plugs (BKR7E)",
       "eventId": "3",
       "userId": 1,
-      "isCompleted": false
+      "isCompleted": true
     },
     {
       "id": 6,
@@ -86,14 +100,46 @@
       "eventId": "6",
       "userId": 1,
       "isCompleted": false,
-      "id": 6
+      "id": 7
     },
     {
-      "id": 7,
+      "taskName": "Wash Car",
+      "taskDesc": "Wash the car before heading out",
+      "eventId": "6",
+      "userId": 1,
+      "isCompleted": true,
+      "id": 8
+    },
+    {
+      "id": 9,
       "taskName": "Clean wheels",
       "taskDesc": "Clean wheels before event for parade lap",
       "eventId": "4",
       "userId": 1,
+      "isCompleted": true
+    },
+    {
+      "id": 10,
+      "taskName": "Tires",
+      "taskDesc": "Change tires on the 240's wheels",
+      "eventId": "4",
+      "userId": 1,
+      "isCompleted": true
+    },
+    {
+      "taskName": "Testing",
+      "taskDesc": "account",
+      "eventId": "7",
+      "userId": 2,
+      "isCompleted": false,
+      "id": 11
+    },
+    {
+      "id": 12,
+      "taskName": "Test ",
+      "taskDesc": "Working",
+      "eventId": "7",
+      "userId": 2,
       "isCompleted": true
     }
   ],
@@ -108,11 +154,11 @@
     },
     {
       "id": 4,
-      "vehicleId": "3",
-      "eventName": "Test",
-      "eventDesc": "Test",
-      "eventDate": "2021-11-02",
-      "eventTrack": "test"
+      "vehicleId": "1",
+      "eventName": "Midpond Christmas Event",
+      "eventDesc": "Christmas event held by Ken at midpond in early december",
+      "eventDate": "2021-12-11",
+      "eventTrack": "Midpond Raceway"
     },
     {
       "vehicleId": 4,
@@ -129,6 +175,14 @@
       "eventDate": "2021-10-13",
       "eventTrack": "Nashville Super Speedway",
       "id": 6
+    },
+    {
+      "vehicleId": 6,
+      "eventName": "Testing ",
+      "eventDesc": "Testing Second account",
+      "eventDate": "2021-10-28",
+      "eventTrack": "Testing",
+      "id": 7
     }
   ],
   "photos": []

@@ -31,7 +31,7 @@ export const Tasks = () => {
     useEffect(() => {
         getTasks();
         console.log(taskIncomplete);
-        console.log(taskComplete)
+        console.log(taskComplete);
     }, [])
 
     return (
