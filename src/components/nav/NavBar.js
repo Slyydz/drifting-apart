@@ -25,9 +25,9 @@ export const NavBar = () => {
         <li className="nav__item">
           <Link className="nav__link" to="/past">Past Events</Link>
         </li>
-        <li className="nav__item">
+        {/* <li className="nav__item">
           <Link className="nav__link" to="/gallery">Photo Gallery</Link>
-        </li>
+        </li> */}
       </ul>
       <button className="nav__button" onClick={() => {
         sessionStorage.removeItem("drifting_user");

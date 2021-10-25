@@ -25,9 +25,9 @@ export const Footer = () => {
                     <li className="nav__item">
                         <Link className="nav__link" to="/past">Past Events</Link>
                     </li>
-                    <li className="nav__item">
+                    {/* <li className="nav__item">
                         <Link className="nav__link" to="/gallery">Photo Gallery</Link>
-                    </li>
+                    </li> */}
                 </ul>
                 <p>&copy; Nashville Software School</p>
             </div>
