@@ -46,7 +46,7 @@ export const TaskEdit = () => {
                 setTask(task);
                 setIsLoading(false);
             });
-    }, []);
+    }, [taskId]);
 
     return (
         <>

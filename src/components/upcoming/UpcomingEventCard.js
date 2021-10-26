@@ -33,7 +33,7 @@ export const UpcomingEventCard = ({ event, handleDelete }) => {
                 <p>Car: {event.vehicle.year} {event.vehicle.make} {event.vehicle.model}</p>
                 <p>Track: {event.eventTrack}</p>
                 <div className="buttons-events">
-                    {user.id == parseInt(sessionStorage.getItem("drifting_user")) ? <><button className="events-delete" onClick={() => history.push(`/upcoming/tasks/${event.id}`)}>Show Tasks</button>
+                    {user.id === parseInt(sessionStorage.getItem("drifting_user")) ? <><button className="events-delete" onClick={() => history.push(`/upcoming/tasks/${event.id}`)}>Show Tasks</button>
                         <button className="events-delete" onClick={() => handleDelete(event.id)}>Delete</button>
                         <button className="events-edit" onClick={() => history.push(`/upcoming/edit/${event.id}`)}>Edit</button> </> :
                         <button className="events-delete" onClick={() => history.push(`/upcoming/tasks/${event.id}`)}>Show Tasks</button>}

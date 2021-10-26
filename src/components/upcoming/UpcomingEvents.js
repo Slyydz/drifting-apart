@@ -16,10 +16,12 @@ export const UpcomingEvents = () => {
     const parsedToday = today.getTime();
     return getEvents().then(eventsFromAPI => {
       const copyOfEvents = [...eventsFromAPI]
-      const futureDatedEvents = copyOfEvents.filter(function (evt) {
+      const futureDatedEvents = copyOfEvents.filter((evt) => {
         let evtDate = Date.parse(evt.eventDate);
         if (evtDate > parsedToday) {
           return evt;
+        } else {
+          return null;
         }
       })
       setEvents(futureDatedEvents);
