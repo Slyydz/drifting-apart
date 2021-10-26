@@ -8,7 +8,8 @@ import "./Tasks.css"
 export const Tasks = () => {
 
     const [taskIncomplete, setTasks] = useState([]);
-    const [taskComplete, setComplete] = useState([])
+    const [taskComplete, setComplete] = useState([]);
+    const [allTasks, setAll] = useState([]);
 
     const history = useHistory();
 
@@ -18,7 +19,8 @@ export const Tasks = () => {
         getTasksByEventId(eventId)
             .then(res => {
                 setComplete(res.filter(taco => taco.isCompleted))
-                setTasks(res.filter(taco => taco.isCompleted != true))
+                setTasks(res.filter(taco => taco.isCompleted !== true))
+                setAll(res);
 
             });
     }
@@ -40,11 +42,11 @@ export const Tasks = () => {
 
                 <h2 className="incomplete">Incomplete Tasks:</h2>
                 <div className="incomplete-tasks-list">
-                    {taskIncomplete.length == 0 ? <h2>No Incomplete Tasks</h2> : taskIncomplete.map(task => <TaskCard key={task.id} task={task} handleDelete={handleDelete} getTasks={getTasks} />)}
+                    {taskIncomplete.length === 0 ? <h2>No Incomplete Tasks</h2> : taskIncomplete.map(task => <TaskCard key={task.id} task={task} handleDelete={handleDelete} getTasks={getTasks} />)}
                 </div>
                 <h2 className="complete">Completed Tasks:</h2>
                 <div className="complete-tasks-list">
-                    {taskComplete.length == 0 ? <h2>No Completed Tasks</h2> : taskComplete.map(task => <TaskCard key={task.id} task={task} handleDelete={handleDelete} getTasks={getTasks} />)}
+                    {taskComplete.length === 0 ? <h2>No Completed Tasks</h2> : taskComplete.map(task => <TaskCard key={task.id} task={task} handleDelete={handleDelete} getTasks={getTasks} />)}
                 </div>
             </div>
         </div>

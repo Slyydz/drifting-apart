@@ -40,7 +40,7 @@ export const VehicleEdit = () => {
                 setVehicle(veh);
                 setIsLoading(false);
             });
-    }, []);
+    }, [vehicleId]);
 
     return (
         <>

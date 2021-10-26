@@ -60,7 +60,7 @@ export const UpcomingEventEdit = () => {
             .then(res => {
                 setVehicle(res)
             });
-    }, []);
+    }, [eventId]);
 
     return (
         <>

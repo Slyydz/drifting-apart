@@ -83,6 +83,8 @@ export const Register = () => {
                 </fieldset>
                 <fieldset className="wrap">
                     <button className="button--login" type="submit"> Register </button>
+                    <button className="button--toLogin" onClick={() => history.push("/login")} type="submit"> Back to login </button>
+
                 </fieldset>
             </form>
         </main>

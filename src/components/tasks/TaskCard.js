@@ -1,13 +1,11 @@
 import React from "react";
 import { useHistory } from "react-router";
 import { update } from "./TaskManager";
-import { useState } from "react";
 
 export const TaskCard = ({ task, handleDelete, getTasks }) => {
 
   const history = useHistory();
 
-  const [isTrue, setTrue] = useState(true);
 
   const changeCompleted = () => {
 
@@ -22,7 +20,6 @@ export const TaskCard = ({ task, handleDelete, getTasks }) => {
 
     update(completeTask).then(() => {
       getTasks();
-      setTrue(false);
     })
   }
 
