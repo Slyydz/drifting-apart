@@ -39,15 +39,15 @@ export const TaskAdd = () => {
 	}
 
 	return (
-		<form className="VehicleForm">
-			<h2 className="VehicleForm__title">New Vehicle</h2>
-			<fieldset>
+		<form className="main-content">
+			<h2 className="_title">New Task:</h2>
+			<fieldset className="fieldset">
 				<div className="form-group">
 					<label htmlFor="taskName">Task Name:</label>
 					<input type="text" id="taskName" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Task Name" value={task.taskName} />
 				</div>
 			</fieldset>
-			<fieldset>
+			<fieldset className="fieldset">
 				<div className="form-group">
 					<label htmlFor="taskDesc">Task Description:</label>
 					<input type="text" id="taskDesc" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Task Description" value={task.taskDesc} />

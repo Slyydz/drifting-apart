@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router';
 import { addVehicle } from './VehicleManager';
+import "../FormStyle.css"
 
 export const VehicleAdd = () => {
 
@@ -35,21 +36,21 @@ export const VehicleAdd = () => {
 	}
 
 	return (
-		<form className="VehicleForm">
-			<h2 className="VehicleForm__title">New Vehicle</h2>
-			<fieldset>
+		<form className="main-content">
+			<h2 className="_title">New Vehicle:</h2>
+			<fieldset className="fieldset">
 				<div className="form-group">
 					<label htmlFor="year">Vehicle year:</label>
 					<input type="text" id="year" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Vehicle year" value={vehicle.year} />
 				</div>
 			</fieldset>
-			<fieldset>
+			<fieldset className="fieldset">
 				<div className="form-group">
 					<label htmlFor="make">Vehicle make:</label>
 					<input type="text" id="make" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Vehicle make" value={vehicle.make} />
 				</div>
 			</fieldset>
-			<fieldset>
+			<fieldset className="fieldset">
 				<div className="form-group">
 					<label htmlFor="model">Vehicle model:</label>
 					<input type="text" id="model" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Vehicle model" value={vehicle.model} />
