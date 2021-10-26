@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+# Drifting Apart
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Drifting Apart Explained
 
-## Available Scripts
+Drifting Apart is an app created for drifters to track their vehicle preparation and specific tasks that they have created to prepare for upcoming drift events.
 
-In the project directory, you can run:
+## Setup: Follow these steps
+1. Open the terminal and clone the repository git@github.com:Slyydz/drifting-apart.git
+2. In order to begin serving the project cd into drifting-apart.
+3. Type npm install and wait for all dependencies to be installed.
+4. After installing the dependencies, in the drifting-apart directory run npm start to serve on your local host. This should serve in localhost: 3000.
+5. In a separate window in the temrinal cd into drifting-apart.
+6. cd into api/ and type json-sever -p 8088 -w database.json.
+7. Serve localhost:8088 in the web browser to retrieve data from the database.
 
-### `npm start`
+## How to navigate Drifting-apart
+Upon serving the correct hosts through your browser, you will be prompted with an option to sign in or register as anew user. You will need to register as a new user.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+After creating your account, you will notice five nav bar selections allowing users to navigate to Home, My Vehicles, Upcoming Events, Past Events, and Logout.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+You can begin your experience by navigating to my vehicles to add whatever vehicle you may take to drift events. After that you should see your vehicle on the screen. 
 
-### `npm test`
+Once you have done this you can navigate to Upcoming Events to see other users events, create your own, or edit/delete your events. After you have created an event you can select the "Show Tasks" button to show the specific tasks for said event. You can see (but not edit) other users completed and incomplete tasks on this screen.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+If you selected one of your events you can edit, delete, or set your tasks to completed. You can also add new tasks to keep track of. 
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If you want to see preparation you have done in the past then you can navigate to Past Events to see events that have passed the current date and navigate through them.
