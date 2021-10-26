@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { update, getTasksById } from "./TaskManager";
-
+import "../FormStyle.css"
 import { useParams, useHistory } from "react-router-dom"
 
 export const TaskEdit = () => {
@@ -50,9 +50,10 @@ export const TaskEdit = () => {
 
     return (
         <>
-            <form>
-                <fieldset>
-                    <div className="formgrid">
+            <form className="main-content">
+                <h2 className="_title">Edit Task:</h2>
+                <fieldset className="fieldset">
+                    <div className="form-group">
                         <label htmlFor="taskName">Task Name:</label>
                         <input
                             type="text"
@@ -62,7 +63,12 @@ export const TaskEdit = () => {
                             id="taskName"
                             value={task.taskName}
                         />
+                    </div>
 
+                </fieldset>
+
+                <fieldset className="fieldset">
+                    <div className="form-group">
                         <label htmlFor="taskDesc">Task Description:</label>
                         <input
                             type="text"
@@ -72,19 +78,20 @@ export const TaskEdit = () => {
                             id="taskDesc"
                             value={task.taskDesc}
                         />
-
                     </div>
-                    <button
-                        type="button" disabled={isLoading}
-                        onClick={updateExistingTask}
-                        className="btn-edit-save"
-                    >Submit</button>
-                    <button
-                        type="button" disabled={isLoading}
-                        onClick={() => history.push(`/upcoming/tasks/${eventId}`)}
-                        className="btn-edit-cancel"
-                    >Cancel</button>
                 </fieldset>
+
+                <button
+                    type="button" disabled={isLoading}
+                    onClick={updateExistingTask}
+                    className="btn-add-save"
+                >Submit</button>
+                <button
+                    type="button" disabled={isLoading}
+                    onClick={() => history.push(`/upcoming/tasks/${eventId}`)}
+                    className="btn-add-edit"
+                >Cancel</button>
+
             </form>
         </>
     );

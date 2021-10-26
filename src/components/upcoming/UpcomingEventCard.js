@@ -19,7 +19,7 @@ export const UpcomingEventCard = ({ event, handleDelete }) => {
     }, [])
 
 
-    const dateVar = new Date(event.eventDate);
+    const dateVar = new Date(event.eventDate + 'T00:00:00');
     const displayDate = dateVar.toLocaleDateString();
 
     return (
@@ -41,6 +41,5 @@ export const UpcomingEventCard = ({ event, handleDelete }) => {
                 </div>
             </div>
         </div>
-
     );
 }
