@@ -1,1 +1,6 @@
-@import "../BackBlock.css"
+@import "../BackBlock.css";
+
+.gallery{
+    overflow:auto;
+    height: 400px;
+}
