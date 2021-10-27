@@ -25,12 +25,24 @@ export const PastEventCard = ({ pastEvent }) => {
 
         <div className="card">
             <div className="pastEvent-card">
-                <h2>Posted by: {user}</h2>
-                <h3>Event: {pastEvent.eventName}</h3>
-                <h4>Description: {pastEvent.eventDesc}</h4>
-                <p>Date: {displayDate}</p>
-                <p>Car: {pastEvent.vehicle.year} {pastEvent.vehicle.make} {pastEvent.vehicle.model}</p>
-                <p>Track: {pastEvent.eventTrack}</p>
+                <div className="flex-card">
+                    <h2 className="bold-under">Posted by:</h2><h2 className="bold">{user}</h2>
+                </div>
+                <div className="flex-card">
+                    <h3 className="bold-under">Event: </h3><h3 className="bold"> {pastEvent.eventName}</h3>
+                </div>
+                <div className="flex-card">
+                    <h4 className="bold-under">Description: </h4><h4 className="bold"> {pastEvent.eventDesc}</h4>
+                </div>
+                <div className="flex-card">
+                    <p className="bold-under">Date: </p><p className="bold"> {displayDate}</p>
+                </div>
+                <div className="flex-card">
+                    <p className="bold-under">Car: </p><p className="bold"> {pastEvent.vehicle.year} {pastEvent.vehicle.make} {pastEvent.vehicle.model}</p>
+                </div>
+                <div className="flex-card">
+                    <p className="bold-under">Track: </p><p className="bold"> {pastEvent.eventTrack}</p>
+                </div>
                 <div className="buttons-events">
                     <button className="events-delete" onClick={() => history.push(`/past/tasks/${pastEvent.id}`)}>Show Tasks</button>
                 </div>
