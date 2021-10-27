@@ -49,21 +49,21 @@
       "id": 4
     },
     {
-      "id": 6,
-      "year": "Testing",
-      "make": "Second ",
-      "model": "User",
-      "userId": 2
+      "year": "1996",
+      "make": "Mazda",
+      "model": "Miata",
+      "userId": 1,
+      "id": 7
+    },
+    {
+      "year": "2000",
+      "make": "Ford",
+      "model": "Focus ST",
+      "userId": 5,
+      "id": 8
     }
   ],
   "tasks": [
-    {
-      "id": 1,
-      "taskName": "Fluids",
-      "taskDesc": "Perform an oil change and transmission fluid flush and change",
-      "eventId": "3",
-      "userId": 1
-    },
     {
       "id": 3,
       "taskName": "Test",
@@ -71,30 +71,6 @@
       "userId": 3,
       "eventId": 5,
       "isCompleted": false
-    },
-    {
-      "id": 4,
-      "taskName": "Tires",
-      "taskDesc": "Change Tires on Z wheels and SSR's",
-      "eventId": "3",
-      "userId": 1,
-      "isCompleted": true
-    },
-    {
-      "id": 5,
-      "taskName": "Spark Plugs",
-      "taskDesc": "Change the spark plugs (BKR7E)",
-      "eventId": "3",
-      "userId": 1,
-      "isCompleted": true
-    },
-    {
-      "id": 6,
-      "taskName": "Bolt Check",
-      "taskDesc": "Check all of the bolts in the rear and front suspension",
-      "eventId": "3",
-      "userId": 1,
-      "isCompleted": true
     },
     {
       "taskName": "Bolt Check",
@@ -113,22 +89,6 @@
       "id": 8
     },
     {
-      "taskName": "Testing",
-      "taskDesc": "account",
-      "eventId": "7",
-      "userId": 2,
-      "isCompleted": false,
-      "id": 11
-    },
-    {
-      "id": 12,
-      "taskName": "Test ",
-      "taskDesc": "Working",
-      "eventId": "7",
-      "userId": 2,
-      "isCompleted": true
-    },
-    {
       "id": 13,
       "taskName": "Tires",
       "taskDesc": "Change Tires on SSR's",
@@ -142,6 +102,30 @@
       "taskDesc": "Check all bolts in the front and rear suspension",
       "eventId": "8",
       "userId": 1
+    },
+    {
+      "id": 15,
+      "taskName": "Single Emoji",
+      "taskDesc": "Get one emoji of me on slack",
+      "eventId": "9",
+      "userId": 5,
+      "isCompleted": true
+    },
+    {
+      "id": 16,
+      "taskName": "Multiple emojis",
+      "taskDesc": "Get multiple emojis",
+      "eventId": "9",
+      "userId": 5,
+      "isCompleted": true
+    },
+    {
+      "taskName": "Rule the world",
+      "taskDesc": "Hmmm",
+      "eventId": "9",
+      "userId": 5,
+      "isCompleted": false,
+      "id": 17
     }
   ],
   "events": [
@@ -162,20 +146,20 @@
       "id": 6
     },
     {
-      "vehicleId": 6,
-      "eventName": "Testing ",
-      "eventDesc": "Testing Second account",
-      "eventDate": "2021-10-28",
-      "eventTrack": "Testing",
-      "id": 7
-    },
-    {
       "id": 8,
       "vehicleId": "1",
       "eventName": "Test",
       "eventDesc": "Test",
       "eventDate": "2021-11-02",
       "eventTrack": "test"
+    },
+    {
+      "id": 9,
+      "vehicleId": 8,
+      "eventName": "Midpond Christmas Event",
+      "eventDesc": "Christmas drift event held by Ken at midpond in early december",
+      "eventDate": "2021-12-18",
+      "eventTrack": "Midpond Raceway"
     }
   ],
   "photos": []

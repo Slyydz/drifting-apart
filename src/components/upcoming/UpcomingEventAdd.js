@@ -101,7 +101,7 @@ export const UpcomingEventAdd = () => {
                     onClick={() => history.push("/upcoming")}>
                     Cancel
                 </button>
-            </form> : <h1>Please go to My Vehicles to add a vehicle before creating an event.</h1>}
+            </form> : <div className="main-content"> <h1>Please go to My Vehicles to add a vehicle before creating an event.</h1> </div>}
         </>
     )
 }

@@ -32,7 +32,7 @@
     height: auto;
     font-family: 'Lato';
     font-size: inherit;
-    font-weight: bold;
+    font-weight: bolder;
     font-size: medium;
 }
 
@@ -136,4 +136,18 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+
+/* .flex-card{
+    display: flex;
+    flex-direction: row;
+} */
+
+.bold-under{
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.bold{
+    font-size: x-large;
 }
