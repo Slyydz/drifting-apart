@@ -16,3 +16,11 @@ export const getPhotos = (input) => {
     return fetch(`${remoteURL}/photos`)
         .then(res => res.json());
 }
+
+export const deletePhoto = (photoId) => {
+    //be sure your animals have good data and related to a location and customer
+    return fetch(`${remoteURL}/photos/${photoId}`, {
+        method: "DELETE"
+    })
+        .then(res => res.json())
+}
