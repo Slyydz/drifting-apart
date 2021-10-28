@@ -65,14 +65,6 @@
   ],
   "tasks": [
     {
-      "id": 3,
-      "taskName": "Test",
-      "taskDesc": "Testing",
-      "userId": 3,
-      "eventId": 5,
-      "isCompleted": false
-    },
-    {
       "taskName": "Bolt Check",
       "taskDesc": "Check all of the bolts in the rear suspension",
       "eventId": "6",
@@ -87,21 +79,6 @@
       "userId": 1,
       "isCompleted": true,
       "id": 8
-    },
-    {
-      "id": 13,
-      "taskName": "Tires",
-      "taskDesc": "Change Tires on SSR's",
-      "eventId": "8",
-      "userId": 1,
-      "isCompleted": true
-    },
-    {
-      "id": 14,
-      "taskName": "Bolt Check",
-      "taskDesc": "Check all bolts in the front and rear suspension",
-      "eventId": "8",
-      "userId": 1
     },
     {
       "id": 15,
@@ -126,32 +103,32 @@
       "userId": 5,
       "isCompleted": false,
       "id": 17
+    },
+    {
+      "id": 19,
+      "taskName": "Spark Plugs",
+      "taskDesc": "Change the spark plugs (BKR7E)",
+      "eventId": "10",
+      "userId": 1,
+      "isCompleted": true
+    },
+    {
+      "taskName": "Bolt Check",
+      "taskDesc": "Check all bolts in the front and rear suspension",
+      "eventId": "10",
+      "userId": 1,
+      "isCompleted": false,
+      "id": 20
     }
   ],
   "events": [
     {
-      "vehicleId": 4,
-      "eventName": "Test",
-      "eventDesc": "Test",
-      "eventDate": "2021-10-23",
-      "eventTrack": "test",
-      "id": 5
-    },
-    {
-      "vehicleId": 1,
-      "eventName": "Test",
-      "eventDesc": "Test",
-      "eventDate": "2021-10-13",
-      "eventTrack": "Nashville Super Speedway",
+      "vehicleId": 3,
+      "eventName": "Clarksville October Event",
+      "eventDesc": "Clarksville's once a month event",
+      "eventDate": "2021-10-12",
+      "eventTrack": "Clarksville Speedway",
       "id": 6
-    },
-    {
-      "id": 8,
-      "vehicleId": "1",
-      "eventName": "Test",
-      "eventDesc": "Test",
-      "eventDate": "2021-11-02",
-      "eventTrack": "test"
     },
     {
       "id": 9,
@@ -160,28 +137,51 @@
       "eventDesc": "Christmas drift event held by Ken at midpond in early december",
       "eventDate": "2021-12-18",
       "eventTrack": "Midpond Raceway"
+    },
+    {
+      "vehicleId": 1,
+      "eventName": "DriftIndy Halloween Bash",
+      "eventDesc": "Halloween Event by DriftIndy",
+      "eventDate": "2021-10-31",
+      "eventTrack": "Indianapolis Motor Speedway",
+      "id": 10
     }
   ],
   "photos": [
     {
-      "userId": 5,
-      "photo": "http://res.cloudinary.com/dkchtgrs0/image/upload/v1635364899/stocmwqec5ai34kjqz63.png",
-      "id": 1
-    },
-    {
       "userId": 1,
-      "photo": "http://res.cloudinary.com/dkchtgrs0/image/upload/v1635367915/wpdkgyuiisbibkmrb7rq.jpg",
+      "photo": "http://res.cloudinary.com/dkchtgrs0/image/upload/v1635433096/xgdw3np38bloii5ibjsw.jpg",
       "id": 2
     },
     {
       "userId": 1,
-      "photo": "http://res.cloudinary.com/dkchtgrs0/image/upload/v1635367943/sawpais3uncsbgryjpx5.jpg",
+      "photo": "http://res.cloudinary.com/dkchtgrs0/image/upload/v1635433665/hhlatis7ahljyeifdbnj.jpg",
       "id": 3
     },
     {
-      "userId": 2,
-      "photo": "http://res.cloudinary.com/dkchtgrs0/image/upload/v1635367978/v7ny2asnmvcv0pf31chl.png",
-      "id": 4
+      "userId": 1,
+      "photo": "http://res.cloudinary.com/dkchtgrs0/image/upload/v1635433846/oxb47fizkoezyujfyhnd.jpg",
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "photo": "http://res.cloudinary.com/dkchtgrs0/image/upload/v1635434190/mx2i031l4mgzn0hqoiuy.jpg",
+      "id": 6
+    },
+    {
+      "userId": 1,
+      "photo": "http://res.cloudinary.com/dkchtgrs0/image/upload/v1635434268/w3bcarrik5d05i1c74jy.jpg",
+      "id": 7
+    },
+    {
+      "userId": 1,
+      "photo": "http://res.cloudinary.com/dkchtgrs0/image/upload/v1635434286/rrjhgjem7rnqh0klsir3.jpg",
+      "id": 8
+    },
+    {
+      "userId": 1,
+      "photo": "http://res.cloudinary.com/dkchtgrs0/image/upload/v1635436358/tzzjy396lagpfgvwstgl.jpg",
+      "id": 9
     }
   ]
 }

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./PhotoGallery.css"
 import Axios from "axios";
-import { addPhoto, getPhotos } from "./PhotoGalleryManager";
+import { addPhoto, deletePhoto, getPhotos } from "./PhotoGalleryManager";
 import { PhotoCard } from "./PhotoGalleryCard";
 
 
@@ -44,6 +44,12 @@ export const PhotoGallery = () => {
       })
   }
 
+  const handleDelete = (input) => {
+
+    deletePhoto(input)
+      .then(() => displayPhotos())
+  }
+
   useEffect(() => {
     displayPhotos();
   }, [])
@@ -52,13 +58,16 @@ export const PhotoGallery = () => {
   return (
     <>
       <div className="main-content">
-        <input type="file" onChange={(e) => { setImage(e.target.files[0]) }} />
-        <button onClick={uploadImage}>Upload Image</button>
-        <div className="gallery">
-
-          {display.map(image => <PhotoCard key={image.id} photo={image} />)}
-
+        <div className="input">
+          <label className="events-add" htmlFor="file_upload" >Upload Image</label>
+          <input id="file_upload" type="file" onChange={(e) => { setImage(e.target.files[0]) }} />
+          <button className="events-add" onClick={uploadImage}>Post</button>
         </div>
+
+        <div className="scroll-box-gallery">
+          {display.map(image => <PhotoCard key={image.id} photo={image} handleDelete={handleDelete} />)}
+        </div>
+
 
       </div>
     </>
