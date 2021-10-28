@@ -18,7 +18,7 @@ export const PastEventCard = ({ pastEvent }) => {
         getUser();
     }, [])
 
-    const dateVar = new Date(pastEvent.eventDate);
+    const dateVar = new Date(pastEvent.eventDate + 'T00:00:00');
     const displayDate = dateVar.toLocaleDateString();
 
     return (
